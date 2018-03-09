@@ -1,64 +1,52 @@
-<html>
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>lylshzp</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>计算器</title>
+<script type="text/javascript">
+ function getResult(){
+  var num1 = document.getElementById("num1").value;//数字1
+  var fuhao = document.getElementById("fuhao").value;//符号
+  var num2 = document.getElementById("num2").value;//数字2
+  var rsnum = "";//结果
+  if(fuhao=="+"){
+   rsnum = parseInt(num1) + parseInt(num2);
+  }else if(fuhao=="-"){
+   rsnum = parseInt(num1) - parseInt(num2);
+  }else if(fuhao=="*"){
+   rsnum = parseInt(num1) * parseInt(num2);
+  }else if(fuhao=="/"){
+   rsnum = parseInt(num1) / parseInt(num2);
+  }
+  document.getElementById("jieguo").value = rsnum
+ }
+</script>
 </head>
-
-<body background="t.jpg">
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;  &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; 
-
-&nbsp; &nbsp;&nbsp; &nbsp;   &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; 
-
-&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;<img  src="./b.png" height="" width="402"/>
-<p><audio src="h.mp3" autoplay="autoplay" loop=infinite></p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; 
-
-&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-
-&nbsp;  <img  src="z.png" align="middle" height="716" width="486"/></p>
-
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; 
-
-&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-
-&nbsp;  <img  src="dog.png" align="middle" height="716" width="486"/></p>
-
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; 
-
-&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-
-&nbsp;  <img  src="m.png" align="middle" height="716" width="486"/></p>
-
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; 
-
-&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-
-&nbsp;  <img  src="w.png" align="middle" height="716" width="486"/></p>
-
-<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img  src="azg.png" align="middle" /></p>
-
-<p> &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; <img  src="bsz.png" align="middle" /></p>
-
-<p> &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-
-&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img  src="office.png" 
-
-align="middle" height="486" width="716"/></p>
-
-<p> &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-
-&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img  src="gsbljbs.png" 
-
-align="middle" height="486" width="716"/></p>
-
-<p> &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-
-&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img  src="o.png" 
-
-alignle" height="486" width="716"/></p>
-
-<h3>233333</h3>
-
+<body>
+  <h2>柳尧龙的测试网页</h2>
+ <div style="width:500px;height:300px;margin:auto;border:1px solid #999999;">
+  <table width="400" border="0">
+    <tr>
+   <td>数字1</td>
+   <td><input id="num1" type="text"/></td>
+    </tr>
+    <tr>
+   <td>符号</td>
+   <td><input id="fuhao" type="text"/></td>
+    </tr>
+    <tr>
+   <td>数字2</td>
+   <td><input id="num2" type="text"/></td>
+    </tr>
+    <tr>
+   <td>结果</td>
+   <td><input id="jieguo" type="text"/></td>
+    </tr>
+    <tr>
+   <td> </td>
+   <td><input type="button" onclick="getResult();" value="计算结果"/></td>
+    </tr>
+  </table>
+ </div>
 </body>
-
 </html>
